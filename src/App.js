@@ -3,7 +3,7 @@ import Heading from './components/Heading';
 import Characters from './components/Characters';
 function App() {
   return (
-    <div >
+    <div>
       <Heading />
       <Characters />
     </div>

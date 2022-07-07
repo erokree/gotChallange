@@ -2,7 +2,7 @@ import React from 'react'
 
 const Heading = () => {
   return (
-    <div>GAME OF THRONES</div>
+    <div id='heading'>GAME OF THRONES</div>
   )
 }
 
