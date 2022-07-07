@@ -1,5 +1,6 @@
 import './App.css';
-
+import Heading from './components/Heading';
+import Characters from './components/Characters';
 function App() {
   return (
     <div >
