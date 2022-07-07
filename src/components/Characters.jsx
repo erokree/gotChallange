@@ -27,12 +27,12 @@ const Characters = () => {
         return <div>Loading...</div>;
       } else {
         return (
-          <>
+          <div className='characters'>
             {items.map(item => (
-                <CharacterCard key={item.id} firstName={item.firstName} lastName={item.lastName} image={item.imageUrl}/>
+                <CharacterCard key={item.id} firstName={item.firstName} lastName={item.lastName} image={item.imageUrl} title={item.title} family={item.family}/>
               
             ))}
-          </>
+          </div>
         );
       }
     }
