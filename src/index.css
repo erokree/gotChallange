@@ -5,15 +5,20 @@ body {
   font-family: "Cinzel", serif;
   font-family: "Raleway", sans-serif;
 }
-#heading {
-  display: flex;
-  flex-direction: column;
+#headingbox {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
     url("./assets/images/thumb-1920-403408\ 1gotthumbnail.png");
-
-  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
   height: 70vh;
-  padding-bottom: 10vh;
+  padding-bottom: 20vh;
+
+  justify-content: flex-end;
+}
+#heading {
   left: 0px;
   top: 0px;
   color: #ffffff;
@@ -23,43 +28,76 @@ body {
   font-size: 96px;
   line-height: 129px;
   text-align: center;
-  justify-content: flex-end;
+
+  object-fit: fill;
 }
-.characters{
-  max-width: 100vw;
-  margin: 0 auto;
+.characters {
+  background: #030303;
+  width: 100%;
+  margin: 0;
+  padding: 0;
   display: grid;
   gap: 1rem;
-  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-  /* display:grid;
-  grid-template-columns: 416px 416px 416px; */
+  place-items: center;
 }
 @media (min-width: 600px) {
-  .characters { grid-template-columns: repeat(1, 1fr); }
+  .characters {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media (min-width: 1000px) {
-  .characters { grid-template-columns: repeat(2, 1fr); }
+  .characters {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 @media (min-width: 1500px) {
-  .characters { grid-template-columns: repeat(3, 1fr); }
+  .characters {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.characterCard{
-  /* display: inline-grid; */
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+.characterCard {
+  overflow: hidden;
+  box-shadow: rgba(202, 202, 202, 0.53) 0px 0px 50px 5px;
+  border: 1px solid #c5c5c5;
+
+  border-radius: 12px;
   transition: 0.3s;
   margin: 40px;
-  background: #FFFFFF;
-  border: 1px solid #000000;
+  background: #ffffff;
   border-radius: 12px;
 
   width: 416px;
-  height: 386px;
+  height: 570px;
 }
-.characterImage{
+.characterName {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 43px;
+  text-align: center;
+
+  color: #1e1e1e;
+}
+.characterImage {
   left: 0px;
   top: 0px;
   width: 100%;
-  height: 70%;
-  object-fit:cover;
+  height: 386px;
+  object-fit: cover;
+}
+.characterDetails {
+  font-family: "Cinzel";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
 
+  color: #1e1e1e;
+}
+
+.characterCard:hover {
+  transform: scale(1.05);
+  box-shadow: rgba(202, 202, 202, 0.881) 0px 0px 50px 5px;
 }
